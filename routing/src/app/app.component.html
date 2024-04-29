@@ -1,0 +1,53 @@
+<h1>Here we are testing routing</h1>
+
+<a routerLink="">Home</a>
+<br>
+<a routerLink="about">About</a>
+<br>
+<a routerLink="user">User</a>
+
+<br>
+<a routerLink="/about/400">About 4000</a>
+<br>
+<a routerLink="/user/400">User 4000</a>
+
+<!-- <h1>{{id}}</h1> -->
+<ul>
+  <li>
+    <a routerLink="login">Login</a>
+  </li>
+  <br>
+  <li>
+    <a routerLink="list">List</a>
+  </li>
+</ul>
+
+
+<app-list></app-list>
+<!-- <ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+  <li *ngFor="let user of users">{{ user.email }}</li>
+  <li *ngFor="let user of users">{{ user.age }}</li>
+</ul> -->
+<!-- 
+<ul>
+  <li *ngFor="let user of users"> {{user.id}} : {{ user.title }}  </li> -->
+  <!-- <li *ngFor="let user of users">{{ user.email }}</li>
+  <li *ngFor="let user of users">{{ user.age }}</li> -->
+<!-- </ul> -->
+
+<!-- <app-footer></app-footer> -->
+
+<!-- create a form  -->
+
+<form #loginForm="ngForm" (ngSubmit)="sendData(loginForm.value)" >
+
+  <input type="text" placeholder="Enter your name" ngModel name="name">
+  <input type="text" placeholder="Enter your email" ngModel name="email">
+  <input type="text" placeholder="Enter your password" ngModel name="password">
+  <button>send data</button>
+</form>
+
+
+
+<router-outlet></router-outlet>
